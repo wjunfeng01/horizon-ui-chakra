@@ -18,7 +18,7 @@ export default function Auth() {
   };
   const getRoutes = (routes) => {
     return routes.map((route, key) => {
-      if (route.layout === '/rtl') {
+      if (route.layout === '/auth') {
         return (
           <Route path={`${route.path}`} element={route.component} key={key} />
         );
