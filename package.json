@@ -1,6 +1,6 @@
 {
   "name": "horizon-ui-chakra",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.18.6",
