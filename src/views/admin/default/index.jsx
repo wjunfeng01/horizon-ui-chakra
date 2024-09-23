@@ -50,6 +50,9 @@ import DailyTraffic from "views/admin/default/components/DailyTraffic";
 import PieCard from "views/admin/default/components/PieCard";
 import Tasks from "views/admin/default/components/Tasks";
 import TotalSpent from "views/admin/default/components/TotalSpent";
+import TotalSpent1 from "./components/TotalSpent1";
+import TotalSpent2 from "./components/TotalSpent2";
+import HeatMap from "./components/Heatmap";
 import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
 import {
   columnsDataCheck,
@@ -79,8 +82,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Earnings'
-          value='$350.4'
+          name='Total Sales Today'
+          value='SGD $3500.40'
         />
         <MiniStatistics
           startContent={
@@ -93,30 +96,53 @@ export default function UserReports() {
               }
             />
           }
-          name='Spend this month'
-          value='$642.39'
+          growth='+23%'
+          name='Average Order Value'
+          value='$124.39'
         />
-        <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
-        <MiniStatistics
-          endContent={
-            <Flex me='-16px' mt='10px'>
+        <MiniStatistics growth='+4%' name='Revenue per Sq Ft' value='$574.34' endContent={
+            <Flex me='-5px' mt='10px'>
               <FormLabel htmlFor='balance'>
-                <Avatar src={Usa} />
+                {/* <Avatar src={Usa} /> */}
+                {/* <Avatar>
+                  <LanguageIcon></LanguageIcon>
+                </Avatar> */}
               </FormLabel>
               <Select
                 id='balance'
-                variant='mini'
+                // variant='mini'
                 mt='5px'
                 me='0px'
                 defaultValue='usd'>
-                <option value='usd'>USD</option>
-                <option value='eur'>EUR</option>
-                <option value='gba'>GBA</option>
+                <option value='usd'>Wisma</option>
+                <option value='eur'>ION</option>
+                <option value='gba'>Suntec</option>
+              </Select>
+            </Flex>
+          }/>
+        <MiniStatistics
+          endContent={
+            <Flex me='-5px' mt='10px'>
+              <FormLabel htmlFor='balance'>
+                {/* <Avatar src={Usa} /> */}
+                {/* <Avatar>
+                  <LanguageIcon></LanguageIcon>
+                </Avatar> */}
+              </FormLabel>
+              <Select
+                id='balance'
+                // variant='mini'
+                mt='5px'
+                me='0px'
+                defaultValue='usd'>
+                <option value='usd'>Retail</option>
+                <option value='eur'>Ecom</option>
+                <option value='gba'>Atrium</option>
               </Select>
             </Flex>
           }
-          name='Your balance'
-          value='$1,000'
+          name='Sales Channels (Daily)'
+          value='$6,239'
         />
         <MiniStatistics
           startContent={
@@ -127,8 +153,8 @@ export default function UserReports() {
               icon={<Icon w='28px' h='28px' as={MdAddTask} color='white' />}
             />
           }
-          name='New Tasks'
-          value='154'
+          name='Inventory Turnover'
+          value='3.4'
         />
         <MiniStatistics
           startContent={
@@ -141,14 +167,112 @@ export default function UserReports() {
               }
             />
           }
-          name='Total Projects'
-          value='2935'
+          name='Monthly Turnover'
+          value='$2,080,104'
         />
       </SimpleGrid>
 
+      <SimpleGrid columns={{ base: 1, md: 2, xl: 1 }} gap='20px' mb='20px'>
+        <TotalSpent/>
+        {/* <WeeklyRevenue /> */}
+      </SimpleGrid>
+      <SimpleGrid columns={{ base: 1, md: 2, xl: 4 }} gap='20px' mb='20px'>
+      <MiniStatistics
+          endContent={
+            <Flex me='-5px' mt='10px'>
+              <FormLabel htmlFor='balance'>
+                {/* <Avatar src={Usa} /> */}
+                {/* <Avatar>
+                  <LanguageIcon></LanguageIcon>
+                </Avatar> */}
+              </FormLabel>
+              <Select
+                id='balance'
+                // variant='mini'
+                mt='5px'
+                me='0px'
+                defaultValue='usd'>
+                <option value='usd'>Public Holiday</option>
+                <option value='eur'>Normal Day</option>
+              </Select>
+            </Flex>
+          }
+          name='Average Revenue'
+          value='$1,256'
+        />
+        <MiniStatistics
+        endContent={
+            <Flex me='-5px' mt='10px'>
+              <FormLabel htmlFor='balance'>
+                {/* <Avatar src={Usa} /> */}
+                {/* <Avatar>
+                  <LanguageIcon></LanguageIcon>
+                </Avatar> */}
+              </FormLabel>
+              <Select
+                id='balance'
+                // variant='mini'
+                mt='5px'
+                me='0px'
+                defaultValue='usd'>
+                <option value='usd'>CBD</option>
+                <option value='eur'>Heartland</option>
+              </Select>
+            </Flex>
+          }
+          name='Average Revenue'
+          value='$2,576'
+        />
+        <MiniStatistics
+        endContent={
+            <Flex me='-5px' mt='10px'>
+              <FormLabel htmlFor='balance'>
+                {/* <Avatar src={Usa} /> */}
+                {/* <Avatar>
+                  <LanguageIcon></LanguageIcon>
+                </Avatar> */}
+              </FormLabel>
+              <Select
+                id='balance'
+                // variant='mini'
+                mt='5px'
+                me='0px'
+                defaultValue='usd'>
+                <option value='usd'>Weekends</option>
+                <option value='eur'>Weekdays</option>
+              </Select>
+            </Flex>
+          }
+          name='Average Revenue'
+          value='$7,359'
+        />
+        <MiniStatistics
+          endContent={
+            <Flex me='-5px' mt='10px'>
+              <FormLabel htmlFor='balance'>
+                {/* <Avatar src={Usa} /> */}
+                {/* <Avatar>
+                  <LanguageIcon></LanguageIcon>
+                </Avatar> */}
+              </FormLabel>
+              <Select
+                id='balance'
+                // variant='mini'
+                mt='5px'
+                me='0px'
+                defaultValue='usd'>
+                <option value='usd'>Promotion</option>
+                <option value='eur'>No Promotion</option>
+              </Select>
+            </Flex>
+          }
+          name='Average Revenue'
+          value='$475'
+        />
+      </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
-        <TotalSpent />
         <WeeklyRevenue />
+        <HeatMap />
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
         <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
@@ -156,6 +280,10 @@ export default function UserReports() {
           <DailyTraffic />
           <PieCard />
         </SimpleGrid>
+      </SimpleGrid>
+      <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
+        <TotalSpent1/>
+        <TotalSpent2/>
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
         <ComplexTable

@@ -1,31 +1,31 @@
 [{
-  "name":["Horizon UI PRO",false],
-  "quantity": 2458, 
-  "date": "12 Jan 2021",
-  "progress": 17.5  
+  "name":["CLEAN-CUT COTTON MAXI DRESS",false],
+  "quantity": "S", 
+  "date": 324,
+  "progress": "Naval"  
 },
 {
-  "name":["Horizon UI Free",true],
-  "quantity": 1485, 
-  "date": "21 Feb 2021",
-  "progress": 10.8  
+  "name":["FLOWY LONG BLOUSE",true],
+  "quantity": "S", 
+  "date": 246,
+  "progress": "Ivory"  
 },
 {
-  "name":["Weekly Update",true],
-  "quantity": 1024, 
-  "date": "13 Mar 2021",
-  "progress": 21.3  
+  "name":["TIED DETAIL V-NECK DRESS",true],
+  "quantity": "M", 
+  "date": 212,
+  "progress": "Hue Grey" 
 },
 {
-  "name":["Venus 3D Asset",true],
-  "quantity": 858, 
-  "date": "24 Jan 2021",
-  "progress": 31.5  
+  "name":["BASIC U-NECK KNIT TOP",true],
+  "quantity": "XS", 
+  "date": 196,
+  "progress": "Army Green"
 },
 {
-  "name":["Marketplace",false],
-  "quantity": 258, 
-  "date": "24 Oct 2022",
-  "progress": 12.2  
+  "name":["STAND COLLAR SHEEN TOP",false],
+  "quantity": "M", 
+  "date": 184,
+  "progress": "Ivory"
 }
 ]

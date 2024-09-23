@@ -29,7 +29,7 @@ export default function DailyTraffic(props) {
               color='secondaryGray.600'
               fontSize='sm'
               fontWeight='500'>
-              Daily Traffic
+              Campaign Performance
             </Text>
           </Flex>
           <Flex align='end'>
@@ -37,15 +37,16 @@ export default function DailyTraffic(props) {
               color={textColor}
               fontSize='34px'
               fontWeight='700'
-              lineHeight='100%'>
-              2.579
+              lineHeight='100%'
+              mt="4px">
+              400%
             </Text>
             <Text
               ms='6px'
               color='secondaryGray.600'
               fontSize='sm'
               fontWeight='500'>
-              Visitors
+              ROI
             </Text>
           </Flex>
         </Flex>
@@ -56,7 +57,7 @@ export default function DailyTraffic(props) {
           </Text>
         </Flex>
       </Flex>
-      <Box h='240px' mt='auto'>
+      <Box h='340px' mt='auto'>
         <BarChart
           chartData={barChartDataDailyTraffic}
           chartOptions={barChartOptionsDailyTraffic}

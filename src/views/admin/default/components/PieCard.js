@@ -26,7 +26,7 @@ export default function Conversion(props) {
         w='100%'
         mb='8px'>
         <Text color={textColor} fontSize='md' fontWeight='600' mt='4px'>
-          Your Pie Chart
+          Top Product per Outlet
         </Text>
         <Select
           fontSize='sm'
@@ -34,9 +34,9 @@ export default function Conversion(props) {
           defaultValue='monthly'
           width='unset'
           fontWeight='700'>
-          <option value='daily'>Daily</option>
-          <option value='monthly'>Monthly</option>
-          <option value='yearly'>Yearly</option>
+          <option value='daily'>Wisma</option>
+          <option value='monthly'>Ion</option>
+          <option value='yearly'>Jem</option>
         </Select>
       </Flex>
 
@@ -51,9 +51,9 @@ export default function Conversion(props) {
         flexDirection='row'
         boxShadow={cardShadow}
         w='100%'
-        p='15px'
+        p='5px'
         px='20px'
-        mt='15px'
+        mt='1px'
         mx='auto'>
         <Flex direction='column' py='5px'>
           <Flex align='center'>
@@ -63,15 +63,15 @@ export default function Conversion(props) {
               color='secondaryGray.600'
               fontWeight='700'
               mb='5px'>
-              Your files
+              Clean Cut Cotton Maxi Dress
             </Text>
           </Flex>
           <Text fontSize='lg' color={textColor} fontWeight='700'>
             63%
           </Text>
         </Flex>
-        <VSeparator mx={{ base: "60px", xl: "60px", "2xl": "60px" }} />
-        <Flex direction='column' py='5px' me='10px'>
+        {/* <VSeparator mx={{ base: "60px", xl: "60px", "2xl": "60px" }} /> */}
+        <Flex direction='column' py='5px' m="10px">
           <Flex align='center'>
             <Box h='8px' w='8px' bg='#6AD2FF' borderRadius='50%' me='4px' />
             <Text
@@ -79,11 +79,27 @@ export default function Conversion(props) {
               color='secondaryGray.600'
               fontWeight='700'
               mb='5px'>
-              System
+              Flowy Long Blouse
             </Text>
           </Flex>
           <Text fontSize='lg' color={textColor} fontWeight='700'>
             25%
+          </Text>
+        </Flex>
+        {/* <VSeparator mx={{ base: "60px", xl: "60px", "2xl": "60px" }} /> */}
+        <Flex direction='column' py='5px' m='10px'>
+          <Flex align='center'>
+            <Box h='8px' w='8px' bg='#6AD2FF' borderRadius='50%' me='4px' />
+            <Text
+              fontSize='xs'
+              color='secondaryGray.600'
+              fontWeight='700'
+              mb='5px'>
+              Tied Detail V-Neck Dress
+            </Text>
+          </Flex>
+          <Text fontSize='lg' color={textColor} fontWeight='700'>
+            12%
           </Text>
         </Flex>
       </Card>

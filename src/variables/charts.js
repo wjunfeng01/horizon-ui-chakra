@@ -1,9 +1,10 @@
 // Daily Traffic Dashboards Default
+import ReactApexChart from "react-apexcharts";
 
 export const barChartDataDailyTraffic = [
   {
     name: "Daily Traffic",
-    data: [20, 30, 40, 20, 45, 50, 30],
+    data: [20, 30, 40, 20],
   },
 ];
 
@@ -27,7 +28,7 @@ export const barChartOptionsDailyTraffic = {
     theme: "dark",
   },
   xaxis: {
-    categories: ["00", "04", "08", "12", "14", "16", "18"],
+    categories: ["Clearance", "Store Opening", "9/9 Sale", "Black Friday"],
     show: false,
     labels: {
       show: true,
@@ -110,14 +111,14 @@ export const barChartDataConsumption = [
     name: "PRODUCT A",
     data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
   },
-  {
-    name: "PRODUCT B",
-    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-  },
-  {
-    name: "PRODUCT C",
-    data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
-  },
+  // {
+  //   name: "PRODUCT B",
+  //   data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+  // },
+  // {
+  //   name: "PRODUCT C",
+  //   data: [400, 370, 330, 390, 320, 350, 360, 320, 380],
+  // },
 ];
 
 export const barChartOptionsConsumption = {
@@ -141,7 +142,7 @@ export const barChartOptionsConsumption = {
     theme: "dark",
   },
   xaxis: {
-    categories: ["17", "18", "19", "20", "21", "22", "23", "24", "25"],
+    categories: ["ION", "Wisma", "Jem", "Bugis", "Suntec", "Vivo", "Marina Square", "Taka", "Tampines"],
     show: false,
     labels: {
       show: true,
@@ -208,8 +209,109 @@ export const barChartOptionsConsumption = {
   },
 };
 
+export const heatChartOptions = {
+  chart: {
+    height: 350,
+    type: 'heatmap',
+    },
+  dataLabels: {
+    enabled: false
+  },
+  colors: ["#008FFB"],
+}
+
+function generateData(count, yrange) {
+  var i = 0;
+  var series = [];
+  while (i < count) {
+    var x = (i + 1).toString();
+    var y =
+    Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+  
+    series.push({
+      x: "week " + x,
+      y: y
+    });
+    i++;
+  }
+  return series;
+  }
+
+
+export const heatChartData = [{
+    name: 'ION',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'Wisma',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'Suntec',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'Bugis',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'Marina Square',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'Jem',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'Tampines',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'Taka',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'Vivo',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  },
+  {
+    name: 'J8',
+    data: generateData(18, {
+      min: 0,
+      max: 90
+    })
+  }
+  ];
+
 export const pieChartOptions = {
-  labels: ["Your files", "System", "Empty"],
+  labels: ["Clean Cut Cotton Maxi Dress", "Flowy Long Blouse", "Tied Detail V-Neck Dress"],
   colors: ["#4318FF", "#6AD2FF", "#EFF4FB"],
   chart: {
     width: "50px",
@@ -257,8 +359,12 @@ export const lineChartDataTotalSpent = [
     data: [50, 64, 48, 66, 49, 68],
   },
   {
-    name: "Profit",
-    data: [30, 40, 24, 46, 20, 46],
+    name: "Avg Sale",
+    data: [55, 55, 55, 55, 55, 55],
+  },
+  {
+    name: "Cost",
+    data: [20, 23, 34, 19, 24, 30],
   },
 ];
 
@@ -276,7 +382,7 @@ export const lineChartOptionsTotalSpent = {
       color: "#4318FF",
     },
   },
-  colors: ["#4318FF", "#39B8FF"],
+  colors: ["#4318FF", "#39B8FF", "#000000"],
   markers: {
     size: 0,
     colors: "white",
@@ -296,7 +402,7 @@ export const lineChartOptionsTotalSpent = {
     theme: "dark",
   },
   dataLabels: {
-    enabled: false,
+    enabled: true,
   },
   stroke: {
     curve: "smooth",
@@ -320,13 +426,20 @@ export const lineChartOptionsTotalSpent = {
     },
   },
   yaxis: {
-    show: false,
+    title: {
+      text: 'SGD $'
+    },
+    min: 10,
+    max: 100
   },
   legend: {
-    show: false,
+    show: true,
+    position: 'top',
+    horizontalAlign: 'right',
+    floating: true,
   },
   grid: {
-    show: false,
+    show: true,
     column: {
       color: ["#7551FF", "#39B8FF"],
       opacity: 0.5,

@@ -6,6 +6,7 @@ import {
   Icon,
   Text,
   useColorModeValue,
+  Checkbox
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/card/Card.js";
@@ -95,7 +96,7 @@ export default function TotalSpent(props) {
               fontWeight='500'
               mt='4px'
               me='12px'>
-              Total Spent
+              Total Sales
             </Text>
             <Flex align='center'>
               <Icon as={RiArrowUpSFill} color='green.500' me='2px' mt='2px' />
@@ -106,9 +107,32 @@ export default function TotalSpent(props) {
           </Flex>
 
           <Flex align='center'>
-            <Icon as={IoCheckmarkCircle} color='green.500' me='4px' />
-            <Text color='green.500' fontSize='md' fontWeight='700'>
-              On track
+            {/* <Icon as={IoCheckmarkCircle} color='secondaryGray.600' me='10px' /> */}
+            <Checkbox color='secondaryGray.600' me='10px'></Checkbox>
+            <Text color='secondaryGray.600' fontSize='md' fontWeight='700'>
+              CBD
+            </Text>
+          </Flex>
+
+          <Flex align='center'>
+            {/* <Icon as={IoCheckmarkCircle} color='secondaryGray.600' me='10px' /> */}
+            <Checkbox color='secondaryGray.600' me='10px'></Checkbox>
+            <Text color='secondaryGray.600' fontSize='md' fontWeight='700'>
+              Weekends
+            </Text>
+          </Flex>
+          <Flex align='center'>
+            {/* <Icon as={IoCheckmarkCircle} color='secondaryGray.600' me='10px' /> */}
+            <Checkbox color='secondaryGray.600' me='10px'></Checkbox>
+            <Text color='secondaryGray.600' fontSize='md' fontWeight='700'>
+              Public Holiday
+            </Text>
+          </Flex>
+          <Flex align='center'>
+            {/* <Icon as={IoCheckmarkCircle} color='secondaryGray.600' me='10px' /> */}
+            <Checkbox color='secondaryGray.600' me='10px'></Checkbox>
+            <Text color='secondaryGray.600' fontSize='md' fontWeight='700'>
+              Promotions
             </Text>
           </Flex>
         </Flex>
@@ -116,6 +140,7 @@ export default function TotalSpent(props) {
           <LineChart
             chartData={lineChartDataTotalSpent}
             chartOptions={lineChartOptionsTotalSpent}
+            
           />
         </Box>
       </Flex>

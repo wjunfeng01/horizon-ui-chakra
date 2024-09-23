@@ -45,7 +45,7 @@ export default function CheckTable(props) {
           fontSize={{ sm: '10px', lg: '12px' }}
           color="gray.400"
         >
-          NAME
+          Product Name
         </Text>
       ),
       cell: (info) => (
@@ -70,7 +70,7 @@ export default function CheckTable(props) {
           fontSize={{ sm: '10px', lg: '12px' }}
           color="gray.400"
         >
-          PROGRESS
+          Colour
         </Text>
       ),
       cell: (info) => (
@@ -88,7 +88,7 @@ export default function CheckTable(props) {
           fontSize={{ sm: '10px', lg: '12px' }}
           color="gray.400"
         >
-          QUANTITY
+          Size
         </Text>
       ),
       cell: (info) => (
@@ -106,7 +106,7 @@ export default function CheckTable(props) {
           fontSize={{ sm: '10px', lg: '12px' }}
           color="gray.400"
         >
-          DATE
+          Quantity
         </Text>
       ),
       cell: (info) => (
@@ -142,7 +142,7 @@ export default function CheckTable(props) {
           fontWeight="700"
           lineHeight="100%"
         >
-          Check Table
+          Top Sales Products
         </Text>
         <Menu />
       </Flex>

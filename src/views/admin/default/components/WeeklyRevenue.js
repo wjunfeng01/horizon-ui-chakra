@@ -41,7 +41,7 @@ export default function WeeklyRevenue(props) {
           fontSize='xl'
           fontWeight='700'
           lineHeight='100%'>
-          Weekly Revenue
+          Sales per Outlet
         </Text>
         <Button
           align='center'
@@ -59,7 +59,7 @@ export default function WeeklyRevenue(props) {
         </Button>
       </Flex>
 
-      <Box h='240px' mt='auto'>
+      <Box h='300px' mt='auto'>
         <BarChart
           chartData={barChartDataConsumption}
           chartOptions={barChartOptionsConsumption}
