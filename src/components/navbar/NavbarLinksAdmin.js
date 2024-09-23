@@ -213,7 +213,7 @@ export default function HeaderLinks(props) {
                 color={textColor}
                 bg="transparent"
               >
-                Try Horizon Free
+                Iora Dashboard
               </Button>
             </Link>
           </Flex>

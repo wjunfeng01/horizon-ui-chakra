@@ -117,6 +117,13 @@ export default function UserReports() {
                 <option value='usd'>Wisma</option>
                 <option value='eur'>ION</option>
                 <option value='gba'>Suntec</option>
+                <option value='usd'>Marina Square</option>
+                <option value='eur'>J8</option>
+                <option value='gba'>Jem</option>
+                <option value='usd'>Vivo</option>
+                <option value='eur'>Taka</option>
+                <option value='gba'>Bugis</option>
+                <option value='usd'>Tampines</option>
               </Select>
             </Flex>
           }/>
@@ -285,7 +292,7 @@ export default function UserReports() {
         <TotalSpent1/>
         <TotalSpent2/>
       </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
+      {/* <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
         <ComplexTable
           columnsData={columnsDataComplex}
           tableData={tableDataComplex}
@@ -294,7 +301,7 @@ export default function UserReports() {
           <Tasks />
           <MiniCalendar h='100%' minW='100%' selectRange={false} />
         </SimpleGrid>
-      </SimpleGrid>
+      </SimpleGrid> */}
     </Box>
   );
 }
